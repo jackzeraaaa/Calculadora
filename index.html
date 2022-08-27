@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <script src="script.js" defer></script>
+    <script src="https://kit.fontawesome.com/07160c098a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <main class="calculadora">
+        <header>
+            <div class="apple-buttons">
+                <div class="red-btn"></div>
+                <div class="yellow-btn"></div>
+                <div class="green-btn"></div>
+            </div>
+            <h1>Calculadora Simples</h1>
+        </header>
+        <article class="painel">
+            <input type="text" name="visor" id="visor" class="visor" disabled placeholder="0" maxlength="17">
+            <i title="Copiar para área de transferência" aria-label="Copiar" class="fa-solid fa-copy" onclick="copy()" id="fa-copy"></i>
+            <section class="buttons">
+                
+                <div class="features">
+                    <input type="button" value="C" class="clear-btn" title="Limpar" onclick="limpar()">
+                    <input type="button" value="&gt;" title="Limpar último" onclick="limparUltimo()">
+                    <input type="button" value="(" onclick="preencher(value)">
+                    <input type="button" value=")" onclick="preencher(value)">
+                </div>
+                
+
+                <div class="numbers-and-operations">
+                    <div class="numbers">
+                        <input type="button" value="7" onclick="preencher(value)">
+                        <input type="button" value="8" onclick="preencher(value)">
+                        <input type="button" value="9" onclick="preencher(value)">
+                        <input type="button" value="4" onclick="preencher(value)">
+                        <input type="button" value="5" onclick="preencher(value)">
+                        <input type="button" value="6" onclick="preencher(value)">
+                        <input type="button" value="1" onclick="preencher(value)">
+                        <input type="button" value="2" onclick="preencher(value)">
+                        <input type="button" value="3" onclick="preencher(value)">
+                        <input type="button" value="0" onclick="preencher(value)">
+                        <input type="button" value="=" onclick="calcular()" class="equal" id="equal">
+                    </div>
+                    <div class="operations">
+                        <input type="button" value="+" onclick="preencher('+')">
+                        <input type="button" value="-" onclick="preencher('-')">
+                        <input type="button" value="x" onclick="preencher('*')">
+                        <input type="button" value="÷" onclick="preencher('/')">
+                    </div>
+                </div>
+            </section>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; Calculadora</p>
+    </footer>
+</body>
+</html>
